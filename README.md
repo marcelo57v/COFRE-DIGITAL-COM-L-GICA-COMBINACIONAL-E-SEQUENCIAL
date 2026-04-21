@@ -20,7 +20,8 @@ O sistema foi projetado para executar as seguintes funções:
 * `/assets`: Imagens do protótipo montado em protoboard e diagramas esquemáticos.
 
 ## Integrantes do Grupo
-* MARCELO ADRIEL CAMARA ALMEIDA
-* HELTON ALVES SÁ
-* DERIANE FERREIRA OLIVEIRA
-* MARCOS GABRIEL BAHURY RODRIGUES
+* DERIANE FERREIRA OLIVEIRA - 20240057711
+* HELTON ALVES SÁ - 20260009631
+* MARCELO ADRIEL CAMARA ALMEIDA - 2020002392
+* MARCOS GABRIEL BAHURY RODRIGUES - 2023037248
+
