@@ -35,13 +35,13 @@ A simulação e validação do hardware foram realizadas na plataforma **Tinkerc
 
 ## Simulação no Tinkercad
 
-Acesse o link público da simulação: https://www.tinkercad.com/things/dHVTRizpx5P-cofre-arduino
-Clique em "Iniciar Simulação".
-Utilize o teclado matricial interativo na tela para testar as senhas e observar o comportamento do display, LEDs e do motor.
+* Acesse o link público da simulação: https://www.tinkercad.com/things/dHVTRizpx5P-cofre-arduino
+* Clique em "Iniciar Simulação".
+* Utilize o teclado matricial interativo na tela para testar as senhas e observar o comportamento do display, LEDs e do motor.
 
 ## Estrutura do Repositório
 
-text
+```text
 cofre-digital/
 ├── src/                        # Código-fonte principal
 │   └── cofre_digital.ino       # Código em C++ para a Arduino IDE
@@ -54,6 +54,7 @@ cofre-digital/
 ├── .gitignore                  
 ├── LICENSE                     
 └── README.md
+```
 
 ## Integrantes do Grupo
 * DERIANE FERREIRA OLIVEIRA - 20240057711
