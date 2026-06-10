@@ -1,27 +1,62 @@
-# Cofre Digital - Lógica Combinacional e Sequencial
+# Cofre Digital
 
-## Descrição do Projeto
-Este repositório contém o desenvolvimento de um **Cofre Digital**, realizado como parte da disciplina de Circuitos Digitais da UFMA. O projeto aplica conceitos fundamentais de eletrônica digital, utilizando lógica combinacional para o processamento de dados e lógica sequencial para o controle de estados, sem o uso de microcontroladores.
+Projeto de um sistema de segurança digital microcontrolado baseado em Arduino. Este repositório contém o código-fonte, os diagramas elétricos e a documentação técnica para a montagem de um cofre com validação de senha, feedback audiovisual e acionamento de trava eletromecânica.
 
-## Especificações Técnicas
-O sistema foi projetado para executar as seguintes funções:
-* **Lógica Combinacional:** Responsável pela verificação da senha binária, comparando a entrada do usuário com a chave armazenada através de comparadores e portas lógicas puras.
-* **Lógica Sequencial:** Gerencia os estados do cofre (Bloqueado e Aberto) utilizando Flip-Flops para garantir a persistência do estado e a segurança do acionamento.
+Projeto desenvolvido como parte das atividades da disciplina de **Circuitos Digitais** do curso de Engenharia da Computação da **Universidade Federal do Maranhão (UFMA)**.
 
-## Principais Componentes
-* **Circuitos Integrados (74xx / 4000):** Portas lógicas básicas para processamento de sinais.
-* **Flip-Flops:** Para armazenamento do estado lógico da máquina de estados (FSM).
-* **Teclado/Botões:** Interface de entrada para inserção da senha binária.
-* **LEDs de Status:** Feedback visual imediato, sendo o LED Verde para acesso permitido e o LED Vermelho para acesso negado.
+---
+
+## Funcionalidades
+
+* **Autenticação Segura:** Inserção de senha numérica através de um teclado matricial 4x4.
+* **Feedback Visual:** Interface interativa utilizando um display LCD (com módulo I2C) para exibir mensagens de status (ex: "Aguardando...", "Senha Correta", "Acesso Negado") e LEDs indicadores (Verde para sucesso, Vermelho para erro).
+* **Feedback Sonoro:** Alertas sonoros via buzzer para cada tecla pressionada e respostas específicas para sucesso ou falha na autenticação.
+* **Mecanismo de Trava:** Acionamento de um relé que controla o motor/fechadura solenoide responsável por destravar a porta do cofre.
+
+---
+
+## Hardware e Componentes
+
+A simulação e validação do hardware foram realizadas na plataforma **Tinkercad**. A lista completa de materiais e os diagramas podem ser encontrados na pasta `/hardware`.
+
+**Principais Componentes Utilizados:**
+* 1x Placa Arduino Uno R3
+* 1x Teclado Matricial 4x4
+* 1x Display LCD 16x2 (com interface I2C)
+* 1x Módulo Relé
+* 1x Motor CC / Fechadura Solenoide (representando a trava)
+* 1x Buzzer (Piezo)
+* LEDs (Verde e Vermelho) e resistores apropriados
+
+> **Visualização do Circuito:**
+> Você pode conferir a montagem na protoboard [aqui](hardware/montagem_protoboard.png) e o diagrama esquemático [aqui](hardware/esquema_eletrico.png).
+
+---
+
+## Simulação no Tinkercad
+
+Acesse o link público da simulação: https://www.tinkercad.com/things/dHVTRizpx5P-cofre-arduino
+Clique em "Iniciar Simulação".
+Utilize o teclado matricial interativo na tela para testar as senhas e observar o comportamento do display, LEDs e do motor.
 
 ## Estrutura do Repositório
-* `/docs`: Relatórios (TAP e PGP), esquemas elétricos e documentação técnica.
-* `/src`: Arquivos de simulação lógica para validação da tabela verdade.
-* `/assets`: Imagens do protótipo montado em protoboard e diagramas esquemáticos.
+
+text
+cofre-digital/
+├── src/                        # Código-fonte principal
+│   └── cofre_digital.ino       # Código em C++ para a Arduino IDE
+├── hardware/                   # Diagramas e especificações físicas
+│   ├── esquema_eletrico.png    # Diagrama de ligações
+│   ├── montagem_protoboard.png # Representação visual do circuito
+│   └── lista_componentes.png   # Tabela BOM (Bill of Materials)
+├── assets/                     # Imagens e recursos visuais do README
+│   └── fluxograma_logica.png   # Fluxograma de funcionamento do código
+├── .gitignore                  
+├── LICENSE                     
+└── README.md
 
 ## Integrantes do Grupo
 * DERIANE FERREIRA OLIVEIRA - 20240057711
 * HELTON ALVES SÁ - 20260009631
 * MARCELO ADRIEL CAMARA ALMEIDA - 2020002392
 * MARCOS GABRIEL BAHURY RODRIGUES - 2023037248
-
